@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "start": "ts-node src/index.ts"
+    "start": "node build/dist.js"
   },
   "devDependencies": {
     "@types/node": "^8.0.29",

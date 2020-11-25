@@ -21,6 +21,12 @@ export const createConnection = async (
     ...baseConnectionOptions,
     ...entitiesAndMigrations,
   };
-  console.log(connectionOptions);
   return createTypeOrmConnection(connectionOptions);
+};
+
+const closeDatabaseConnection = async (): Promise<void> => {
+  const connection = getConnection();
+  if (connection.isConnected) {
+    await connection.close();
+  }
 };

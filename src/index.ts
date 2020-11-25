@@ -17,5 +17,6 @@ createConnection({ loadEntitiesAndMigrations: true })
     console.log("Loaded users: ", users);
 
     console.log("Here you can setup and run express/koa/any other framework.");
+    process.exit();
   })
   .catch((error) => console.log(error));
